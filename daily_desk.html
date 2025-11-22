@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Daily Desk – MHE Capital</title>
+
+  <style>
+    body {
+      margin:0;
+      font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:#e5e7eb;
+      overflow-x:hidden;
+      background:#0f172a;
+    }
+
+    /* =============================
+       BACKGROUND BLUR LAYERS
+    ============================== */
+    .bg-blur {
+      position: fixed;
+      inset: 0;
+      background: url("./images/font.jpg") center/cover no-repeat;
+      filter: blur(8px) brightness(0.45);
+      z-index: -2;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: -1;
+    }
+
+    /* =============================
+       NAVBAR
+    ============================== */
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 14px 0;
+        z-index: 10;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(8px);
+    }
+
+    .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 28px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+    .nav-links a:hover {
+        color:#60a5fa;
+    }
+
+    .nav-btn {
+        padding:10px 20px;
+        background:#1e3a8a;
+        border-radius:8px;
+        color:white !important;
+        font-weight:500;
+        text-decoration:none;
+    }
+
+    .nav-btn:hover { background:#3b82f6; }
+
+    @media(max-width:800px){
+        .nav-links { display:none; }
+    }
+
+    /* =============================
+       DAILY DESK WRAPPER
+    ============================== */
+    .wrap {
+      max-width:900px;
+      margin:140px auto 80px;
+      background: rgba(2, 6, 23, 0.88);
+      border-radius:12px;
+      padding:32px 32px 45px;
+      border:1px solid #1f2937;
+      backdrop-filter: blur(6px);
+    }
+
+    h1 { font-size:24px; margin-bottom:12px; }
+    h2 { font-size:18px; margin-top:26px; border-bottom:1px solid #1f2937; padding-bottom:5px; }
+    p { font-size:14px; line-height:1.5; }
+
+    ul { padding-left:20px; }
+    li { font-size:14px; margin:3px 0; }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+      margin-top:8px;
+    }
+
+    th, td {
+      font-size:13px;
+      padding:7px 8px;
+      border-bottom:1px solid #111827;
+      text-align:left;
+    }
+
+    th {
+      background:#020617;
+      color:#9ca3af;
+      font-weight:600;
+    }
+
+    .small { font-size:12px; color:#9ca3af; }
+
+    .section-box {
+      background:rgba(15, 23, 42, 0.8);
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid #1f2937;
+      margin-top:10px;
+      backdrop-filter:blur(5px);
+    }
+
+    .dot-g { background:#22c55e; }
+    .dot-r { background:#ef4444; }
+    .dot-n { background:#9ca3af; }
+    .dot-g, .dot-r, .dot-n {
+      display:inline-block;
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      margin-right:6px;
+      vertical-align:middle;
+    }
+
+    .archives-btn {
+      background:#1e3a8a;
+      padding:12px 24px;
+      border-radius:8px;
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      display:inline-block;
+      margin-top:35px;
+    }
+    .archives-btn:hover { background:#3b82f6; }
+
+  </style>
+</head>
+
+<body>
+
+<!-- BACKGROUND LAYERS -->
+<div class="bg-blur"></div>
+<div class="bg-overlay"></div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="./daily_desk.html">Daily Desk</a></li>
+      <li><a href="./projects/projects.html">Projects</a></li>
+    </ul>
+
+    <a href="mailto:contact.mhecapital@gmail.com?subject=Contact%20MHE%20Capital"
+       class="nav-btn">Contact Us</a>
+  </nav>
+</header>
+
+<!-- DAILY DESK CONTENT -->
+<div class="wrap">
+
+  <h1>Daily Desk – November 21, 2025</h1>
+  <p class="small">
+    A lighter macro day but key inflation data out of Japan and PMI signals from Europe.  
+    Markets digest yesterday’s US data with mixed sentiment.
+  </p>
+
+  <h2>1. Macro Context & Sentiment</h2>
+  <div class="section-box">
+    <ul>
+      <li>Asian inflation low, supporting accommodative BOJ stance.</li>
+      <li>European PMIs show contraction risk but slightly above expectations.</li>
+      <li>US markets consolidating after strong NFP surprise yesterday.</li>
+      <li>Dollar stable; gold holds highs; volatility remains subdued.</li>
+    </ul>
+    <p class="small">Sources: Reuters, Bloomberg, Yahoo Finance, MarketWatch.</p>
+  </div>
+
+  <h2>2. Long-Term Trend – US Indices</h2>
+  <table>
+    <tr><th>Index</th><th>LT Bias</th><th>Structure</th><th>Risks</th></tr>
+    <tr><td>S&P 500 (ES)</td><td>Neutral</td><td>Compression</td><td>Macro digestion</td></tr>
+    <tr><td>Nasdaq 100 (NQ)</td><td>Bullish</td><td>Uptrend intact</td><td>Tech profit-taking</td></tr>
+    <tr><td>Dow Jones (YM)</td><td>Bearish</td><td>Lower highs</td><td>Weak industrial sentiment</td></tr>
+  </table>
+
+  <h2>3. US Open Focus – Intraday Playbook</h2>
+  <p class="small"><strong>Logic:</strong> PMIs + yesterday’s employment data set a neutral opening bias.</p>
+
+  <table>
+    <tr><th>Index</th><th>Bias</th><th>Support</th><th>Liquidity Zone</th><th>Scenario</th></tr>
+
+    <tr>
+      <td>ES</td>
+      <td><span class="dot-n"></span> neutral</td>
+      <td>5035</td>
+      <td>5110</td>
+      <td>Liquidity sweep → revert to mean</td>
+    </tr>
+
+    <tr>
+      <td>NQ</td>
+      <td><span class="dot-g"></span> bullish</td>
+      <td>17750</td>
+      <td>18120</td>
+      <td>Buy dips into support → trend continuation</td>
+    </tr>
+
+    <tr>
+      <td>YM</td>
+      <td><span class="dot-r"></span> bearish</td>
+      <td>38120</td>
+      <td>38600</td>
+      <td>Reject VWAP → downside target</td>
+    </tr>
+  </table>
+
+  <h2>4. Economic Calendar</h2>
+  <p class="small">🟢 pro-risk — ⚪ neutral — 🔴 risk-off</p>
+
+  <table>
+    <tr><th>Time</th><th>Country</th><th>Indicator</th><th>Details</th><th>Bias</th></tr>
+
+    <tr><td>00:30</td><td>Japan</td><td>Inflation YoY</td><td>3% — Prev 2.9%</td><td><span class="dot-n"></span></td></tr>
+    <tr><td>00:50</td><td>Japan</td><td>Trade Balance</td><td>-231.8B¥ — Prev -234.6B¥</td><td><span class="dot-g"></span></td></tr>
+    <tr><td>08:00</td><td>UK</td><td>Retail Sales MoM</td><td>-1.1% — Prev 0.7%</td><td><span class="dot-r"></span></td></tr>
+    <tr><td>09:30</td><td>Germany</td><td>HCOB Manufacturing PMI Flash</td><td>49.8</td><td><span class="dot-n"></span></td></tr>
+    <tr><td>10:30</td><td>UK</td><td>Manufacturing PMI</td><td>49.2</td><td><span class="dot-r"></span></td></tr>
+    <tr><td>10:30</td><td>UK</td><td>Services PMI</td><td>52</td><td><span class="dot-g"></span></td></tr>
+  </table>
+
+  <h2>5. Gold Focus – GC</h2>
+  <div class="section-box">
+    <ul>
+      <li>Stable above key supports.</li>
+      <li>Watching liquidity at 2380.</li>
+      <li>Drivers: UK PMIs + USD behaviour.</li>
+    </ul>
+  </div>
+
+  <h2>6. Elies’ Note</h2>
+  <div class="section-box">
+    <p>Stay selective. Trend continuation expected only on clean levels.</p>
+  </div>
+
+  <!-- ARCHIVES BUTTON -->
+  <div style="text-align:center;">
+    <a href="archives.html" class="archives-btn">View Archives</a>
+  </div>
+
+</div>
+
+</body>
+</html>

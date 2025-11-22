@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MHE Capital – Financial Research & Insights</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+/* =========================
+   RESET & GLOBAL
+========================= */
+
+body {
+    margin:0 !important;
+    padding:0 !important;
+    background:#0f172a !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    color:#ffffff !important;
+}
+
+/* Supprimer les fonds blancs Astra */
+.site, .ast-container, .entry-content {
+    background: transparent !important;
+}
+
+/* Sections générales */
+section {
+    padding:80px 20px;
+}
+
+h1, h2, h3, p {
+    color:#ffffff !important;
+}
+
+h1 {
+    font-size:42px;
+    font-weight:700;
+}
+
+h2 {
+    font-size:32px;
+    text-align:center;
+    margin-bottom:12px;
+}
+
+h3 {
+    font-size:22px;
+}
+
+/* Container */
+.container {
+    max-width:1100px;
+    margin:0 auto;
+}
+
+/* Buttons */
+.btn {
+    display:inline-block;
+    padding:12px 24px;
+    border-radius:8px;
+    background:#1e3a8a;
+    color:white !important;
+    text-decoration:none;
+    font-weight:500;
+    transition:0.2s;
+}
+
+.btn:hover {
+    background:#3b82f6;
+}
+
+/* =========================
+   NAVBAR CLEAN & CENTERED
+========================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 14px 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* menu ←→ bouton */
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Menu links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+/* Bouton Contact dans la navbar */
+.nav-btn {
+    padding: 10px 20px;
+    background: #1e3a8a;
+    border-radius: 8px;
+    color: white !important;
+    font-weight: 500;
+}
+
+.nav-btn:hover {
+    background: #3b82f6;
+}
+
+
+/* MOBILE */
+@media(max-width: 800px) {
+    .nav-links {
+        display: none; /* version simple sans hamburger */
+    }
+}
+
+/* =========================
+   SECTION DEMARCATION
+========================= */
+
+#about { background:#0b1220; }
+#domains { background:#020617; }
+#team { background:#0b1220; }
+#dailydesk { background:#020617; }
+#projects  { background:#0b1220; }
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    height:88vh;
+    background: url('./images/font.jpg') center/cover no-repeat;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero::after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position:relative;
+    z-index:2;
+    padding:20px;
+}
+
+/* =========================
+   ABOUT US
+========================= */
+
+.about-grid {
+    display:grid;
+    grid-template-columns:0.9fr 1.1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-img {
+    width:100%;
+    max-width:380px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+    margin:auto;
+    display:block;
+}
+
+/* =========================
+   DOMAINS
+========================= */
+
+.domains-grid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin-top:30px;
+}
+
+.domain-box {
+    background:#020617;
+    padding:28px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+}
+
+.domain-header {
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+}
+
+.domain-icon {
+    width:50px;
+    height:50px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+/* =========================
+   TEAM
+========================= */
+
+.team {
+    text-align:center;
+}
+
+.team img {
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:50%;
+    border:4px solid #1f2937;
+    margin-bottom:20px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-box {
+    max-width:650px;
+    margin:0 auto;
+    background:#020617;
+    padding:40px;
+    border-radius:12px;
+    border:1px solid #1f2937;
+}
+
+.contact-box input[type="text"],
+.contact-box input[type="email"],
+.contact-box textarea {
+    width:100%;
+    padding:12px;
+    margin-bottom:14px;
+    border-radius:8px;
+    background:#0f172a;
+    border:1px solid #1f2937;
+    color:white;
+}
+
+.contact-box .wpforms-field-label,
+.contact-box .wpforms-required-label {
+    color:#e5e7eb !important;
+}
+
+.contact-box .wpforms-submit {
+    background:#1e3a8a;
+    color:#ffffff;
+    border:none;
+    border-radius:8px;
+    padding:10px 22px;
+    font-weight:500;
+    cursor:pointer;
+}
+
+.contact-box .wpforms-submit:hover {
+    background:#3b82f6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding:40px 20px;
+    background:#020617;
+    text-align:center;
+    border-top:1px solid #1f2937;
+}
+
+.disclaimer {
+    color:#94a3b8 !important;
+    font-size:13px;
+    margin-top:12px;
+    max-width:850px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:800px){
+    .about-grid,
+    .domains-grid {
+        grid-template-columns:1fr;
+    }
+    .about-img {
+        max-width:100%;
+    }
+    h1 { font-size:32px; }
+    h2 { font-size:26px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#dailydesk">Daily Desk</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+
+    <a <a href="mailto:contact.mhecapital@gmail.com?subject=Contact%20MHE%20Capital"
+   class="btn nav-btn">
+   Contact Us
+</a>
+</a>
+  </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>MHE CAPITAL</h1>
+    <p style="font-size:18px;">Financial Research & Market Insights</p>
+    <a href="#dailydesk" class="btn">Access the Daily Desk</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <h2>About Us</h2>
+
+    <div class="about-grid">
+      <img src="./images/about.jpg" class="about-img" alt="Quant dashboard">
+      <div>
+        <p>Founded from a passion for understanding financial markets, <strong>MHE Capital</strong> develops research-driven models based on quantitative methods and macro-financial analysis.</p>
+        <p>We study market dynamics using advanced tools such as flow analysis, statistical modeling, investor behavior, inter-market relationships, and macroeconomic cycles.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DOMAINS -->
+<section id="domains">
+  <div class="container">
+    <h2>Our Research Areas</h2>
+
+    <p style="max-width:650px; margin:0 auto; text-align:center;">
+      Our expertise spans several core pillars for understanding modern financial markets.
+    </p>
+
+    <div class="domains-grid">
+
+      <div class="domain-box">
+        <div class="domain-header">
+          <img src="./images/2.png" class="domain-icon" alt="Macroeconomics">
+          <h3>Macroeconomics & Cycles</h3>
+        </div>
+        <p>Analysis of economic cycles, sentiment, market regimes, and structural trends.</p>
+      </div>
+
+      <div class="domain-box">
+        <div class="domain-header">
+          <img src="./images/3.png" class="domain-icon" alt="Quantitative models">
+          <h3>Quantitative Models</h3>
+        </div>
+        <p>Development of algorithmic tools: volatility, momentum, flows, microstructure.</p>
+      </div>
+
+      <div class="domain-box">
+        <div class="domain-header">
+          <img src="./images/1.png" class="domain-icon" alt="Investor behavior">
+          <h3>Investor Behavior</h3>
+        </div>
+        <p>Study of cognitive biases, market psychology, positioning, and derivative data.</p>
+      </div>
+
+      <div class="domain-box">
+        <div class="domain-header">
+          <img src="./images/4.png" class="domain-icon" alt="Sector studies">
+          <h3>Sector & Inter-Market Analysis</h3>
+        </div>
+        <p>Research on correlations between sectors, asset classes, and macro drivers.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container team">
+    <h2>Our Team</h2>
+
+    <img src="./images/me.jpg" alt="Elies Mlayah">
+
+    <h3>Elies Mlayah</h3>
+    <p style="font-size:15px; color:#94a3b8;">Founder & Financial Analyst</p>
+
+    <a href="https://www.linkedin.com/in/elies-mlayah-69a542246/" target="_blank">
+      <svg width="34" height="34" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg" style="background:#0f172a; padding:6px; border-radius:8px; border:1px solid #1f2937; margin-top:12px;">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zm13.5 11.268h-3v-5.604c0-1.337-.026-3.059-1.865-3.059-1.867 0-2.154 1.46-2.154 2.968v5.695h-3v-10h2.881v1.367h.041c.401-.761 1.379-1.562 2.837-1.562 3.034 0 3.595 2.003 3.595 4.609v5.586z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- DAILY DESK CTA -->
+<section id="dailydesk" style="text-align:center;">
+  <div class="container">
+    <h2>Daily Desk – Market Intelligence</h2>
+
+    <p style="max-width:700px; margin:0 auto;">
+      Access daily market insights: macro bias, microstructure, key levels, opening scenarios, and global sentiment.
+    </p>
+
+    <br>
+    <a href="daily_desk.html" class="btn">View Daily Analyses</a>
+  </div>
+</section>
+
+<!-- PROJECTS CTA -->
+<section id="projects" style="text-align:center;>
+  <div class="container">
+    <h2>Quantitative Models & Algorithms</h2>
+
+    <p style="max-width:700px; margin:0 auto;">
+      Explore mathematical frameworks, quantitative tools, and algorithmic models
+      developed to understand market microstructure, volatility regimes,
+      cross-asset relationships, and statistical patterns in financial markets.
+    </p>
+
+    <br>
+    <a href="./projects/projects.html" class="btn">View Research Projects</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>MHE Capital © 2025 – All rights reserved</p>
+  <p class="disclaimer">
+    This website does not constitute investment solicitation or financial advice.
+    MHE Capital is an independent research-driven structure dedicated to academic analysis
+    and financial market studies.
+  </p>
+</footer>
+<script>
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 30) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+});
+</script>
+</body>
+</html>
