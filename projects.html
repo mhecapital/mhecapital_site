@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+
+  <meta charset="UTF-8" />
+  <title>Projects – MHE Capital</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #ffffff;
+      background: #0f172a;
+    }
+
+    .bg-blur {
+      position: fixed;
+      inset: 0;
+      background: url("./images/font2.jpg") center/cover no-repeat;
+      filter: blur(7px) brightness(0.40);
+      z-index: -2;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.50);
+      z-index: -1;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 14px 0;
+      z-index: 10;
+      background: rgba(0,0,0,0.35);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 26px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    .nav-links a:hover { color:#60a5fa; }
+
+    .nav-btn {
+      padding: 10px 20px;
+      background: #1e3a8a;
+      border-radius: 8px;
+      color: white !important;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-btn:hover { background:#3b82f6; }
+
+
+    /* CONTENT GRID */
+    .wrap {
+      max-width:1100px;
+      margin:140px auto 60px;
+      padding:0 20px;
+    }
+
+    h1 {
+      text-align:center;
+      margin-bottom:14px;
+      font-size:34px;
+    }
+    .subtitle {
+      text-align:center;
+      color:#cbd5e1;
+      max-width:700px;
+      margin:0 auto 50px;
+      font-size:16px;
+    }
+
+    .grid {
+      display:grid;
+      gap:30px;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    }
+
+    .card {
+      background:rgba(2,6,23,0.85);
+      border-radius:12px;
+      border:1px solid #1f2937;
+      backdrop-filter:blur(6px);
+      overflow:hidden;
+      transition:0.25s;
+    }
+    .card:hover { transform:translateY(-3px); }
+
+    .card img {
+      width:100%;
+      height:170px;
+      object-fit:cover;
+    }
+
+    .card h3 { margin:14px 18px 8px; font-size:18px; }
+    .card p {
+      margin:0 18px 16px;
+      font-size:14px;
+      color:#cbd5e1;
+    }
+
+    .card a {
+      display:inline-block;
+      margin:0 18px 18px;
+      padding:8px 16px;
+      background:#1e3a8a;
+      border-radius:8px;
+      text-decoration:none;
+      color:white;
+      font-size:13.5px;
+      font-weight:500;
+      transition:0.2s;
+    }
+    .card a:hover { background:#3b82f6; }
+
+  </style>
+</head>
+
+
+<body>
+
+<div class="bg-blur"></div>
+<div class="bg-overlay"></div>
+
+<header class="navbar">
+  <nav class="nav-container">
+    <ul class="nav-links">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./daily_desk.html">Daily Desk</a></li>
+      <li><a href="./projects.html">Projects</a></li>
+    </ul>
+    <a href="mailto:contact.mhecapital@gmail.com?subject=Contact%20MHE%20Capital" class="nav-btn">Contact Us</a>
+  </nav>
+</header>
+
+
+<div class="wrap">
+
+<h1>Projects</h1>
+<p class="subtitle">
+A hub for long-term work : book writing and reading, investment research,
+capital development and trading frameworks.
+</p>
+
+
+<div class="grid">
+
+  <!-- BOOK -->
+  <div class="card">
+    <img src="projects\coming_soon.jpg" alt="Book Project">
+    <h3>Book – In Writing</h3>
+    <p>A long-form project on market discipline, capital growth,
+    and execution edge. (Only in French))</p>
+    <a href="">Comming soon</a>
+  </div>
+
+  <!-- FUND -->
+  <div class="card">
+    <img src="images\fund.jpeg" alt="Fund Project">
+    <h3>MHE Capital Personnal Fund</h3>
+    <p>Investment vehicle leveraging stochastic modeling, probability-based decision frameworks 
+and systematic risk-adjusted compounding.</p>
+    <a href="">Learn More</a>
+  </div>
+
+  <!-- RESEARCH LIBRARY -->
+  <div class="card">
+    <img src="projects\library.jpg" alt="Research Library">
+    <h3>Research Library</h3>
+    <p>A curated library of books, research material & references shaping investment thinking.</p>
+    <a href=".\library.html">Open Library</a>
+  </div>
+</div>
+</div>
+
+</body>
+</html>
